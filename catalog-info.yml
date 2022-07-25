@@ -28,4 +28,4 @@ spec:
   type: website
   lifecycle: production
   owner: demo-team
-  system: test-system
+  system: test-system 
