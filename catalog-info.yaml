@@ -24,4 +24,5 @@ spec:
   lifecycle: production
   owner: Demo-Team
   system: Demo-System 
- 
+  dependsOn: ['Component:backend-function-1']
+
