@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DemoBackstage1
+  annotations:
+    github.com/project-slug: shiva570/DemoBackstage1
+spec:
+  type: other
+  lifecycle: unknown
+  owner: test
