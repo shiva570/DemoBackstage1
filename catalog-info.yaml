@@ -1,10 +1,29 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: lastmile-HHT-Housebuilder
+  description: This system will handle housebuilder pdf generation process .
+spec:
+  owner: last-mile-team
+  domain: logistics
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: DemoBackstage1
+  name: lastmile-hht-housebuilder-email
+  title: Last Mile HHT Housebuilder email 
+  description: once housebuilder pdf is generated then lambda will puts the data into dynamodb which creates a trigger that invokes this function for sending email.This function will process the email request and uses the communication service api to send an email. 
+  
   annotations:
-    github.com/project-slug: shiva570/DemoBackstage1
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - lambda
+    - dotnetcore
 spec:
-  type: other
-  lifecycle: unknown
-  owner: test
+  type: website
+  lifecycle: production
+  owner: last-mile-team
+  system: lastmile-HHT-Housebuilder
+  dependsOn: ['system:lastmile-HHT-services-api']
+ 
+ 
